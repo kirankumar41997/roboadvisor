@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="home">
+     <h1>Sector Selection</h1>
+     <p>Please  select the sector that your portfolio would be made of. </p>
+     <br><p>You can select one or more sector </p>
+       <form action="{{ url_for('stock_selection') }}" method="POST">
+  <input type="checkbox" id="tech" name='sector' value="tech">
+  <label for="tech"> Technology</label><br>
+  <input type="checkbox" id="green"name='sector'  value="green">
+  <label for="green"> Green</label><br>
+  <input type="checkbox" id="retail" name='sector'  value="retail" checked>
+  <label for="retail"> Retail</label><br><br>
+
+ 
+ 
+ 
+ 
+ 
+  <input type="submit" value="Submit">
+   </form>
+
+      
+<button onclick="goBack()">Go Back</button>
+ <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script>
+    </div>
+      
+ 
+  {% endblock %}
+

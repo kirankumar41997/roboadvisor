@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="home">
+     <h1>Select your age</h1>
+     <p>Please select age from the list below</p>
+        <form action="{{ url_for('risk_analysis') }}" method="POST">
+          <label for="age">Choose your age:</label>
+          <select id="age" name="age">
+            <option value=1>20-30</option>
+            <option value=0.8>31-40</option>
+            <option value=0.6>41-50</option>
+            <option value=0.4>51-65</option>
+            <option value=0.2>65</option>
+      </select>
+  
+    <br><br>
+    
+    <h1>What are you working toward?</h1>
+    <p>Give your money a goal, and it's got something to work toward.</p>
+    
+      <label for="plan">Choose a plan:</label>
+      <select id="plan" name="plan">
+        <option value=0.25>Retirement</option>
+        <option value=1>Major Purchase</option>
+        <option value=0.75>Generate Income</option>
+        <option value=0.5>Building Portfolio</option>
+      </select>
+      <br><br>
+      
+      <h1>What is your salary?</h1>
+    <p>Select your annual taxable income that you are currently earning.</p>
+    
+      <label for="salary">Choose a salary:</label>
+      <select id="salary" name="salary">
+        <option value=0.2>$0-$50,000</option>
+        <option value=0.4>$50,001-$100,000</option>
+        <option value=0.6>$100,000 - $250,000 </option>
+        <option value=0.8>$250,000 - $1,000,000</option>
+        <option value=1>>$1,000,000</option>
+      </select>
+      <br><br>
+      
+      <h1>What is your savings?</h1>
+    <p>Select your total savings that you are currently holding.</p>
+    
+      <label for="savings">Choose a savings:</label>
+      <select id="savings" name="savings">
+        <option value=0.2>$0-$50,000</option>
+        <option value=0.4>$50,001-$100,000</option>
+        <option value=0.6>$100,000 - $250,000 </option>
+        <option value=0.8>$250,000 - $1,000,000</option>
+        <option value=1>>$1,000,000</option>
+      </select>
+      <br><br>
+     
+    
+    <h1>Are you providing for someone?</h1>
+    <p> Please select yes if you are providing for someone.</p>
+    
+      <label for="family">Choose an option:</label>
+      <select id="family" name="family">
+        <option value=0.5>Yes</option>
+        <option value=1>No</option>
+        </select>
+      <br><br>
+ <input type="submit">
+    </form>
+
+<button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+ </div>
+ {% endblock %}

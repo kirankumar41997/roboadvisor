@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="home">
+     <h1>RoboAdvisor</h1>
+     
+ 
+ <h1> Stock Weight for Maximum Return per Unit of Risk</h1>
+ 
+{% for table in tables_1 %}
+            
+            {{ table|safe }}
+{% endfor %}
+
+
+<br><br>
+ 
+  <h1> Stock Weight for Minimum Volatility</h1>
+
+{% for table in tables_2 %}
+            
+            {{ table|safe }}
+{% endfor %}
+
+<h1>Select your stock weight </h1>
+     <p>Please select the choice of stock weight</p>
+        <form action="{{ url_for('portfolio') }}" method="POST">
+          <label for="weights">Choose your weights:</label>
+          <select id="weights" name="weights">
+            <option value=0>Maximum return per unit of risk</option>
+            <option value=1>Minimum Volatility </option>
+             </select>
+            <br><br>
+    
+    <input type="submit" value="Proceed" />
+
+   </form>
+
+<button onclick="goBack()">Go Back</button> 
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script>
+       </div>
+    
+
+{% endblock %}
+

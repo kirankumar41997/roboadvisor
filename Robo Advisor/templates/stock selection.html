@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="home">
+     <h1>Stock Selection</h1>
+     <p>Enter all stocks you want to include or exclude in the portfolio. Please enter the ticker symbol for the stocks.</p>
+     <br><p>For example, if you want to own Apple and Google, enter AAPL GOOG in the text box.</p> <br><br>
+       <form action="{{ url_for('stock_weight') }}" method="POST">
+  <label for="must_ticker">Enter the ticker symbol of all the stocks you need it to be included in the portfolio:</label>
+  <input type="text" id="must_ticker" name="must_ticker"><br><br>
+  <label for="reject_ticker">Enter the ticker symbol of all the stocks you do no want to be included in the portfolio::</label>
+  <input type="text" id="reject_ticker" name="reject_ticker"><br><br>
+  <input type="submit" value="Submit">
+   </form>
+
+      
+<button onclick="goBack()">Go Back</button>
+ <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script>
+    </div>
+      
+ 
+  {% endblock %}

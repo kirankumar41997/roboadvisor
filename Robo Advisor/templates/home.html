@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="home">
+     <h1>RoboAdvisor</h1>
+     <p>Click to analyse your risk profile</p>
+     
+ <form action="{{ url_for('form') }}" method="POST">
+    <input type="submit" value="Start" />
+</form>
+  </div>
+{% endblock %}

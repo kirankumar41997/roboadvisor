@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="home">
+     <h1>RoboAdvisor</h1>
+     <p>Your portfolio contains {{stocks}}% of stocks and {{bonds}}% of bonds.</p>
+
+{% for table in tables %}
+            
+            {{ table|safe }}
+{% endfor %}
+{{weight}}
+<br><br>
+
+ <img src={{mc_image}} />
+ 
+ <br><br>
+ 
+ 
+ <img src={{backtesting_image}} />
+ 
+{% endblock %}
+
