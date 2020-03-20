@@ -1,0 +1,2 @@
+To run the roboadvisor, first download the whole folder 'Roboadvisor'. Then open Roboadvisor.py file and run it. 
+Once the program is running, go to the your browser such as chrome and in the url, type "http://localhost:5000/". 
